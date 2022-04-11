@@ -1,0 +1,153 @@
+
+* {
+    box-sizing: border-box;
+}
+
+label {
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: #aebaf3;
+}
+
+header, footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: #0066ff70;
+    padding: 20px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+footer {
+    justify-content: center;
+}
+
+header {
+    padding: 0 0 0 15px;
+}
+
+.search {
+    width: 20%;
+    background: #00a1ff30;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 70px;
+}
+
+input[type="text"] {
+    margin-bottom: 16px;
+    height: 34px;
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+}
+
+input[type="button"] {
+    height: 40px;
+    width: 110px;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+div#main-content {
+    border: 2px solid #a115159e;
+    width: 80%;
+    display: flex;
+    padding-top: 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-content div {
+    font-size: 17px;
+}
+
+.radio {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100px;
+}
+
+select#unit-selection {
+    margin-bottom: 10px;
+}
+
+div#selectors {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+div#result {
+    display: flex;
+    flex-direction: column;
+width: 80%;}
+
+div#result section {
+
+    margin: 12px;
+    padding: 20px;
+}
+
+div#result section {
+    border: 2px solid #0000ff5c;
+    
+}
+
+section#hourly-forecast {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex: 2;
+}
+
+section#daily-forecast {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    
+max-width: 100%;}
+
+div#hour-div {
+    display: flex;
+}
+
+div#daily-div {
+    display: flex;
+}
+
+div#current-hour-div {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.hourly-content {
+    margin: 10px;
+}
+
+
+
+.data-content {
+    margin: 10px;
+display: flex;flex-direction: column;border: 1px solid blue;height: fit-content;}
+
+.data-content div {margin: 12px;width: 168px;}
+
+section#current {height: fit-content;}
