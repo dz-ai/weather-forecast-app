@@ -3,7 +3,7 @@ const urlCity = 'https://api.openweathermap.org/data/2.5/weather?';
 const urlForecast = 'https://api.openweathermap.org/data/2.5/onecall?';
 
 export async function citySearch (cityName) {
-   const response = await fetch(urlCity + `q=${cityName}&appid=b5e0511eee65e6ccbcce8d7662f6f9c2`);
+   const response = await fetch(urlCity + `q=${cityName}&appid=key`);
     return await response.json()
 }
 
