@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>weather app</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </head>
-<body onload="getEl(); cityBoxDisplayToggle();">
+<body onload="onLoad();">
 <header>
     <h1>Weather App</h1>
 </header>
@@ -15,7 +16,9 @@
 <main>
     <div class="search">
 
-        <input id="searchBox" type="text" placeholder="City Name">
+        <input id="searchBox" type="text"
+               placeholder="City Name"
+                onkeydown="onPress(this)">
 
             <div>
                 <label for="unit-selection">Unit</label>
@@ -26,12 +29,10 @@
                 </select>
             </div>
 
-        <input  type="button" value="Search" onclick="cityOnClicked()">
+        <input  type="button" value="Search" onclick="onClick()">
     </div>
 
-    <div id="main-content">
-        <div id="hour-div"></div>
-    </div>
+    <div id="main-content"></div>
 </main>
 
 

@@ -15,7 +15,8 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: #aebaf3;
+    background: url("https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2t5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60") no-repeat;
+    background-size: cover;
 }
 
 header, footer {
@@ -24,6 +25,7 @@ header, footer {
     align-items: center;
     background: #0066ff70;
     padding: 20px;
+    color: white;
 }
 
 main {
@@ -65,16 +67,21 @@ input[type="button"] {
 }
 
 div#main-content {
-    border: 2px solid #a115159e;
     width: 80%;
     display: flex;
     padding-top: 0px;
     flex-direction: column;
     align-items: center;
+    box-shadow: inset 4px 4px 19px #013960;
 }
 
 #main-content div {
     font-size: 17px;
+}
+
+#title {
+    color: white;
+    text-align: center;
 }
 
 .radio {
@@ -98,32 +105,39 @@ div#selectors {
 div#result {
     display: flex;
     flex-direction: column;
-width: 80%;}
+    width: 80%;
+}
 
 div#result section {
-
     margin: 12px;
     padding: 20px;
+    background: #95c0e485;
+    box-shadow: 0 0 13px 0px #0b629e;
+    border-radius: 5px;
 }
 
-div#result section {
-    border: 2px solid #0000ff5c;
-    
-}
 
 section#hourly-forecast {
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: hidden;
     flex: 2;
+}
+
+#hourly-forecast-list {
+    overflow: auto;
 }
 
 section#daily-forecast {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+#daily-forecast-list {
     overflow: auto;
-    
-max-width: 100%;}
+}
 
 div#hour-div {
     display: flex;
@@ -143,11 +157,22 @@ div#current-hour-div {
 }
 
 
-
 .data-content {
     margin: 10px;
-display: flex;flex-direction: column;border: 1px solid blue;height: fit-content;}
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    background: #f0f8ff59;
+    border-radius: 10px;
+    box-shadow: 0 0 9px #2980bf;
+}
 
-.data-content div {margin: 12px;width: 168px;}
+.data-content div {
+    margin: 12px;
+    min-width: 200px;
+}
 
-section#current {height: fit-content;}
+section#current {
+    height: fit-content;
+}
