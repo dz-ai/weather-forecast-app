@@ -8,6 +8,6 @@ export async function citySearch (cityName) {
 }
 
 export async function foreCastSearch (lat, lon, unit) {
-  const response = await fetch(urlForecast + `lat=${lat}&lon=${lon}&units=${unit}&appid=b5e0511eee65e6ccbcce8d7662f6f9c2`);
+  const response = await fetch(urlForecast + `lat=${lat}&lon=${lon}&units=${unit}&appid=key`);
   return response.json()
 }
