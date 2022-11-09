@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const axios = require("axios");
 require('dotenv').config();
 
 const app = express();
@@ -10,18 +11,27 @@ app.use(express.static('public'));
 
 const API_KEY = process.env.API_KEY;
 
-app.post('/city-search', async (req, res) => {
+app.post('/city-search',  (req, res) => {
     const {urlCity, cityName} = req.body;
+    console.log('post')
 
-    const response = await fetch(urlCity + `q=${cityName}&appid=${API_KEY}`);
-     res.json(response);
+    axios.request({method: "get", url: `${urlCity}q=${cityName}&appid=${API_KEY}`})
+        .then(response => {
+           //console.log(response.data)
+            res.json(response.data);
+        })
+        .catch(e => console.error(e));
 });
 
-app.get('/forecast-search', async (req, res) => {
+app.post('/forecast-search',  (req, res) => {
     const {urlForecast, lat, lon, unit} = req.body;
 
-    const response = await fetch(urlForecast + `lat=${lat}&lon=${lon}&units=${unit}&appid=${API_KEY}`);
-    res.json(response);
+    axios.request({method: "get", url: `${urlForecast}lat=${lat}&lon=${lon}&units=${unit}&appid=${API_KEY}`})
+        .then(response => {
+            console.log(response.data)
+            res.json(response.data);
+        })
+        .catch(e => console.error(e));
 });
 
 app.listen(5000, () => console.log('5000'));
